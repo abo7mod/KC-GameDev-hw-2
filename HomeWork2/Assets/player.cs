@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class player : MonoBehaviour
 {
+    //test
     public float speed;
-    public Rigidbody Rg;
+    public Rigidbody2D Rg;
     public bool left;
+    public bool right;
 
 
 
@@ -29,43 +31,45 @@ public class player : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.A))
             {
-                Rg.velocity = new Vector2(0f,speed);
+                Rg.velocity = new Vector2(0f, speed);
             }
-        }
 
-
-
-        else if (left)
-        {
-            if (Input.GetKey(KeyCode.D))
+            else if (Input.GetKey(KeyCode.D))
             {
+
+
                 Rg.velocity = new Vector2(0f, -speed);
             }
             else
             {
-                Rg.velocity = new Vector2(0f,0f);
+                Rg.velocity = new Vector2(0f, 0f);
 
             }
+            
+
+
+
         }
-        else
+
+        if(right)
         {
 
-            if (left)
+
+
+            if (Input.GetKey(KeyCode.UpArrow))
             {
-                if (Input.GetKey(KeyCode.UpArrow))
-                {
-                    Rg.velocity = new Vector2(0f, speed);
-                }
+                Rg.velocity = new Vector2(0f, speed);
             }
 
 
 
-            else if (left)
+
+            else if (Input.GetKey(KeyCode.DownArrow))
             {
-                if (Input.GetKey(KeyCode.DownArrow))
-                {
-                    Rg.velocity = new Vector2(0f, -speed);
-                }
+
+
+                Rg.velocity = new Vector2(0f, -speed);
+
             }
             else
             {
@@ -75,6 +79,5 @@ public class player : MonoBehaviour
 
 
         }
-
     }
 }
