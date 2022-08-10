@@ -10,6 +10,16 @@ public class player : MonoBehaviour
     public bool left;
     public bool right;
 
+    //Ahamd one top
+    //Ahamd one top
+
+    //Ahamd one top
+    //Ahamd one top
+
+    //Ahamd one top
+    
+    //Ahamd one top
+
 
 
 
