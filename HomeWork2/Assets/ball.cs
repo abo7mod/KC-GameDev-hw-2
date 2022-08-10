@@ -10,6 +10,7 @@ public class ball : MonoBehaviour
     public float speed;
     private int score, score2;
     public TextMeshProUGUI textR, textL;
+    int inc = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +39,7 @@ public class ball : MonoBehaviour
             textL.text = score2.ToString();
             lanunch();
         }
+       
     }
 
     // Update is called once per frame
